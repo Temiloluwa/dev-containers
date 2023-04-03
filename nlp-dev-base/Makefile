@@ -1,4 +1,3 @@
-
 REGION := us-east-1
 ACCOUNT_ID := 222311789433
 REPO_NAME := dev-containers/nlp-dev-base
