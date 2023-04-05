@@ -5,7 +5,7 @@ before_script:
   - apt install make
 
 variables:
-  DEV-ENV: nlp-dev-base
+  DEV-ENV: "nlp-dev-base"
   DOCKER_HOST: tcp://docker:2375
 
 stages:
