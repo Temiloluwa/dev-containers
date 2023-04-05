@@ -7,7 +7,9 @@ services:
   - docker:dind
 
 before_script:
-  - amazon-linux-extras install docker make
+  - amazon-linux-extras install docker
+  - yum install httpd
+  - yum install make 
   - aws --version
   - docker --version
 
