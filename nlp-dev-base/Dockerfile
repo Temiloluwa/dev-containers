@@ -4,7 +4,7 @@ COPY environment.yml .
 COPY configure-env.sh .
 
 # configure aws environment
-RUN sh configure-env.sh
+RUN sh configure-env.sh $keyId $keyValue
 # install conda environment
 # install miniconda
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh

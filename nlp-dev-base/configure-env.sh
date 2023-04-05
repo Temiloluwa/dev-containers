@@ -1,4 +1,6 @@
 # default arguments
+keyId=$1
+keyValue=$2
 sshKey=macbook-ssh-private-key
 sshRoot="/root/.ssh"
 sshKeyPath="/root/.ssh/id_rsa"
