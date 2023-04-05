@@ -1,0 +1,13 @@
+stages:
+  - build
+  - deploy
+
+build-job:
+  stage: build
+  script:
+    - echo "Hello, $GITLAB_USER_LOGIN!"
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "This job tests something"
