@@ -4,6 +4,10 @@ default:
 before_script:
   - apt install make
 
+variables:
+  DEV-ENV: nlp-dev-base
+  DOCKER_HOST: tcp://docker:2375
+
 stages:
   - build
   - deploy
@@ -11,7 +15,7 @@ stages:
 build-job:
   stage: build
   script:
-    - cd nlp-dev-base
+    - cd $DEV-ENV
     - export KEY_ID=$AWS_ACCESS_KEY_ID
     - export KEY_VALUE=$AWS_SECRET_ACCESS_KEY
     - make ecr_login
@@ -20,6 +24,6 @@ build-job:
 deploy-job:
   stage: deploy
   script:
-    - cd nlp-dev-base
+    - cd $DEV-ENV
     - make ecr_push
   
