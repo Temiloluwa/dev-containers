@@ -2,9 +2,14 @@ default:
   image:
     name: amazon/aws-cli
     entrypoint: [""]
-    
+
+services:
+  - docker:dind
+
 before_script:
-  - apt install make
+  - amazon-linux-extras install docker make
+  - aws --version
+  - docker --version
 
 variables:
   DEV_ENV: nlp-dev-base
