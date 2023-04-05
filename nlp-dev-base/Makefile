@@ -16,3 +16,7 @@ ecr_build:
 
 ecr_push:
 	docker push $(ACCOUNT_ID).dkr.ecr.$(REGION).amazonaws.com/$(REPO_NAME):$(IMAGE_TAG)
+
+ecr_pull:
+	- make ecr_login
+	- docker pull $(ACCOUNT_ID).dkr.ecr.$(REGION).amazonaws.com/$(REPO_NAME):$(IMAGE_TAG)
