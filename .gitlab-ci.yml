@@ -17,21 +17,15 @@ variables:
   DOCKER_HOST: tcp://docker:2375
 
 stages:
-  - build
-  - deploy
+  - build-deploy
 
-build-job:
-  stage: build
+build-and-deploy-job:
+  stage: build-deploy
   script:
     - cd $DEV_ENV
     - export KEY_ID=$AWS_ACCESS_KEY_ID
     - export KEY_VALUE=$AWS_SECRET_ACCESS_KEY
     - make ecr_login
     - make ecr_build
-  
-deploy-job:
-  stage: deploy
-  script:
-    - cd $DEV_ENV
     - make ecr_push
   
