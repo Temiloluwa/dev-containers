@@ -10,7 +10,7 @@ COPY configure-env.sh .
 RUN sh configure-env.sh $keyId $keyValue
 # install miniconda
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-py38_23.1.0-1-Linux-x86_64.sh
-RUN sh Miniconda3-py38_23.1.0-1-Linux-x86_64.sh -b -p /root/miniconda3 
+RUN sh Miniconda3-py38_23.1.0-1-Linux-x86_64.sh -b -p /home/vscode/miniconda3 
 RUN rm -f Miniconda3-py38_23.1.0-1-Linux-x86_64.sh
 RUN eval "$(/home/vscode/miniconda3/bin/conda shell.sh hook)"
 # install conda environment
