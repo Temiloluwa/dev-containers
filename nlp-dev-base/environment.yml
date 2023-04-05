@@ -1,0 +1,25 @@
+name: nlp-dev-base
+channels:
+  - huggingface
+  - conda-forge
+  - defaults
+dependencies:
+  - beautifulsoup4=4.11.1
+  - huggingface_hub
+  - matplotlib-inline=0.1.6
+  - numpy=1.23.5
+  - numpy-base=1.23.5
+  - pip=23.0.1
+  - python=3.8.16
+  - pytz=2022.7
+  - scrapy=2.8.0
+  - sip=6.6.2
+  - tqdm=4.65.0
+  - transformers=4.27.4
+  - pip:
+      - proxyscrape==0.3.0
+      - scrapy-proxy-pool==0.1.9
+      - scrapy-user-agents==0.1.1
+      - sentencepiece==0.1.97
+      - ua-parser==0.16.1
+      - user-agents==2.2.0
