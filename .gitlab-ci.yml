@@ -11,6 +11,7 @@ stages:
 build-job:
   stage: build
   script:
+    - cd nlp-dev-base
     - export KEY_ID=$AWS_ACCESS_KEY_ID
     - export KEY_VALUE=$AWS_SECRET_ACCESS_KEY
     - make ecr_login
@@ -19,5 +20,6 @@ build-job:
 deploy-job:
   stage: deploy
   script:
+    - cd nlp-dev-base
     - make ecr_push
   
