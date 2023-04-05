@@ -1,7 +1,7 @@
 REGION := us-east-1
 ACCOUNT_ID := 222311789433
 REPO_NAME := dev-containers/nlp-dev-base
-IMAGE_TAG := 2.0.1
+IMAGE_TAG := 2.0.2
 KEY_ID ?= aws-programmatic-key-id-as-env-variable
 KEY_VALUE ?= aws-programmatic-key-value-as-env-variable
 

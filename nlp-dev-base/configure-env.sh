@@ -2,8 +2,7 @@
 keyId=$1
 keyValue=$2
 sshKey=macbook-ssh-private-key
-sshRoot="/root/.ssh"
-sshKeyPath="/root/.ssh/id_rsa"
+sshKeyPath="/home/vscode/.ssh/id_rsa"
 awsProfile=tobi
 
 # install awscli
@@ -20,6 +19,5 @@ aws configure set aws_secret_access_key $keyValue
 aws configure set default.region us-east-1
 
 # get ssh credentials from secrets manager
-mkdir -p $sshRoot
 aws secretsmanager get-secret-value --secret-id $sshKey --query SecretString --output text > $sshKeyPath
 chmod 400 $sshKeyPath
