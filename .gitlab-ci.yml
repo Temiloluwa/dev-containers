@@ -23,9 +23,10 @@ build-and-deploy-job:
   stage: build-deploy
   script:
     - cd $DEV_ENV
-    - export KEY_ID=$AWS_ACCESS_KEY_ID
+    - export KEY_ID=$AWS_ACCESS_KEY_ID # pass variables to docker file as environmental variables
     - export KEY_VALUE=$AWS_SECRET_ACCESS_KEY
+    - export TEST_VAR=$TEST_VAR
     - make ecr_login
     - make ecr_build
-    - make ecr_push
+#    - make ecr_push
   
