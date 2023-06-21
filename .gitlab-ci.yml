@@ -13,7 +13,7 @@ before_script:
   - docker --version
 
 variables:
-  DEV_ENV: nlp-dev-base
+  DEV_ENV: jekyll
   DOCKER_HOST: tcp://docker:2375
 
 stages:
